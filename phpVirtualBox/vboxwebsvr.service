@@ -1,0 +1,12 @@
+[Unit]
+Description=vboxwebsrv Service
+After=network.target
+
+[Service]
+User=
+Group=
+ExecStart=/usr/bin/vboxwebsrv -H 192.168.0.15 -p 18083
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
